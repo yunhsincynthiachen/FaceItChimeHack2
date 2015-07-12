@@ -168,9 +168,34 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Heatmap of General Locations Where Incidents Happen On Your Campus
+
+                            Face it near you
                         </div>
                         <!-- /.panel-heading -->
+
+                        <div id="bar">
+                        <script type="text/javascript">
+                            var svg = dimple.newSvg("div#bar", 750, 350);
+                            var data = [
+                                { "Day":"Sunday", "Incidents at Siquel College":0 },
+                              { "Day":"Monday", "Incidents at Siquel College":0 },
+                              { "Day":"Tuesday", "Incidents at Siquel College":1 },
+                              { "Day":"Wednesday", "Incidents at Siquel College":1 },
+                              { "Day":"Thursday", "Incidents at Siquel College":0 },
+                              { "Day":"Friday", "Incidents at Siquel College":2 },
+                              { "Day":"Saturday", "Incidents at Siquel College":3 }
+
+                            ];
+                            var chart = new dimple.chart(svg, data);
+                            chart.addCategoryAxis("x", "Day");
+                            chart.addMeasureAxis("y", "Incidents at Siquel College");
+                            chart.addSeries(null, dimple.plot.bar);
+                            // chart.assignColor("Day", "red", "black", 1);
+                            chart.draw();
+                          </script>
+                        </div>
+                        <br>
+                        <div>Heatmap of Incidents near you</div>
 
                         <div id="map" style="height: 300px;"></div>
                         <script>var map = L.map('map').setView([37.3, -121.5], 8);
@@ -202,21 +227,8 @@
                         }).addTo(map);
                         circle.bindPopup("10 reports of an incident here.");
                         </script>
-                        <br>
-                        <div id="bar">
-                        <script type="text/javascript">
-                            var svg = dimple.newSvg("div#bar", 800, 600);
-                            var data = [
-                              { "Word":"Hello", "Awesomeness":2000 },
-                              { "Word":"World", "Awesomeness":3000 }
-                            ];
-                            var chart = new dimple.chart(svg, data);
-                            chart.addCategoryAxis("x", "Word");
-                            chart.addMeasureAxis("y", "Awesomeness");
-                            chart.addSeries(null, dimple.plot.bar);
-                            chart.draw();
-                          </script>
-                          </div>
+                        
+
 
             </div>
             <!-- /.row -->
