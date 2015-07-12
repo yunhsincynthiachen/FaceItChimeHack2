@@ -192,8 +192,8 @@
                             // chart.assignColor("Day", "red", "black", 1);
                             chart.draw();
                           </script>
-                        </div>
                         <br>
+                        </div>
                         </div>
                         <div class="panel panel-default">
                         <div class="panel-heading">
@@ -233,7 +233,35 @@
                         
 
                         </div>
-            </div>
+                        <div class="panel panel-default">
+                        <div class="panel-heading">
+
+                            Most Common Topics of Posts
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div id="bar2">
+                        <script type="text/javascript">
+                            var svg = dimple.newSvg("div#bar2", 1000, 1200);
+                            var data = [
+                                { "Incident":"Sexual Assault", "Incidents at Siquel College":40 },
+                              { "Incident":"Crude Language", "Incidents at Siquel College": 112},
+                              { "Incident":"Inappropriate Touching", "Incidents at Siquel College":35 },
+                              { "Incident":"Stalking", "Incidents at Siquel College":1 },
+                              { "Incident":"Verbal Abuse", "Incidents at Siquel College":12 },
+                              { "Incident":"Physical Abuse", "Incidents at Siquel College":2 },
+                              { "Incident":"Public Shaming", "Incidents at Siquel College":3 }
+
+                            ];
+                            var chart = new dimple.chart(svg, data);
+                            chart.addCategoryAxis("x", "Incident");
+                            chart.addMeasureAxis("y", "Incidents at Siquel College");
+                            chart.addSeries(null, dimple.plot.bar);
+                            // chart.assignColor("Day", "red", "black", 1);
+                            chart.draw();
+                          </script>
+                        <br>
+                        </div>
+                        </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
