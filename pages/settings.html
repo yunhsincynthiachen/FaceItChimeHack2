@@ -35,6 +35,9 @@
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.1.4.min.js"></script>
+    <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="http://www.amcharts.com/lib/3/pie.js"></script>
+    <script src="http://www.amcharts.com/lib/3/themes/light.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -129,106 +132,29 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-
-                            Incidents by Day of the Week
+                            Use <a href="#">Our API</a> to Create Impactful Visualizations
+                        </div>
+                        <div style="height: 60px">
+                        <div class="form-group">
+                            <label for="issueSupplier" class="col-sm-4 control-label">Upload Your Visualization</label>
+                            <div class="col-sm-7">
+                              <input type="file" name="pic" accept="image/*">
+                            </div>
+                        </div>
                         </div>
                         <!-- /.panel-heading -->
-                        <div id="bar">
-                        <script type="text/javascript">
-                            var svg = dimple.newSvg("div#bar", 750, 350);
-                            var data = [
-                                { "Day":"Sunday", "Incidents at Siquel College":0 },
-                              { "Day":"Monday", "Incidents at Siquel College":0 },
-                              { "Day":"Tuesday", "Incidents at Siquel College":1 },
-                              { "Day":"Wednesday", "Incidents at Siquel College":1 },
-                              { "Day":"Thursday", "Incidents at Siquel College":0 },
-                              { "Day":"Friday", "Incidents at Siquel College":2 },
-                              { "Day":"Saturday", "Incidents at Siquel College":3 }
 
-                            ];
-                            var chart = new dimple.chart(svg, data);
-                            chart.addCategoryAxis("x", "Day");
-                            chart.addMeasureAxis("y", "Incidents at Siquel College");
-                            chart.addSeries(null, dimple.plot.bar);
-                            // chart.assignColor("Day", "red", "black", 1);
-                            chart.draw();
-                          </script>
-                        <br>
-                        </div>
-                        </div>
-                        <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Heatmap of Incidents Near You
-                        </div>
-
-                        <div id="map" style="height: 300px;"></div>
-                        <script>var map = L.map('map').setView([37.3, -121.5], 8);
-                        L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-                            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-                            maxZoom: 18,
-                            id: 'examples.map-i875mjb7',
-                            accessToken: 'your.mapbox.public.access.token'
-                        }).addTo(map);
-                        var circle = L.circle([37.7, -122.5], 5000, {
-                            color: 'red',
-                            fillColor: '#f03',
-                            fillOpacity: 0.5
-                        }).addTo(map);
-                        var circle2 = L.circle([37.5, -121.0], 2000, {
-                            color: 'red',
-                            fillColor: '#f03',
-                            fillOpacity: 0.5
-                        }).addTo(map);
-                        var circle3 = L.circle([37.1, -121.6], 4000, {
-                            color: 'red',
-                            fillColor: '#f03',
-                            fillOpacity: 0.5
-                        }).addTo(map);
-                        var circle3 = L.circle([36.8, -120.2], 5000, {
-                            color: 'red',
-                            fillColor: '#f03',
-                            fillOpacity: 0.5
-                        }).addTo(map);
-                        circle.bindPopup("10 reports of an incident here.");
-                        </script>
-                        
-
-                        </div>
-                        <div class="panel panel-default">
-                        <div class="panel-heading">
-
-                            Most Common Topics of Posts
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div id="bar2">
-                        <script type="text/javascript">
-                            var svg = dimple.newSvg("div#bar2", 1000, 1200);
-                            var data = [
-                                { "Incident":"Sexual Assault", "Incidents at Siquel College":40 },
-                              { "Incident":"Crude Language", "Incidents at Siquel College": 112},
-                              { "Incident":"Inappropriate Touching", "Incidents at Siquel College":35 },
-                              { "Incident":"Stalking", "Incidents at Siquel College":1 },
-                              { "Incident":"Verbal Abuse", "Incidents at Siquel College":12 },
-                              { "Incident":"Physical Abuse", "Incidents at Siquel College":2 },
-                              { "Incident":"Public Shaming", "Incidents at Siquel College":3 }
-
-                            ];
-                            var chart = new dimple.chart(svg, data);
-                            chart.addCategoryAxis("x", "Incident");
-                            chart.addMeasureAxis("y", "Incidents at Siquel College");
-                            chart.addSeries(null, dimple.plot.bar);
-                            // chart.assignColor("Day", "red", "black", 1);
-                            chart.draw();
-                          </script>
-                        <br>
-                        </div>
-                        </div>
+            </div>
             <!-- /.row -->
         </div>
+
         <!-- /#page-wrapper -->
 
     </div>
+    </div>
     <!-- /#wrapper -->
+
+
 
     <!-- jQuery -->
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
