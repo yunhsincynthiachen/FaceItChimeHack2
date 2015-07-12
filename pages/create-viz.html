@@ -205,39 +205,21 @@
     </div>
     <!-- /#wrapper -->
 
-    <div id="chartContainer" style="width: 100%;height: 500px;font-size : 11px;"></div>
+    <div id="chartContainer" style="position: relative; left: 310px;bottom:420px;width: 60%;height: 500px;font-size : 11px;"></div>
                              <script>
                              var chart = AmCharts.makeChart( "chartContainer", {
                                   "type": "pie",
                                   "theme": "light",
                                   "dataProvider": [ {
-                                    "country": "Lithuania",
-                                    "litres": 501.9
+                                    "country": "Severe: Danger",
+                                    "litres": 201.9
                                   }, {
-                                    "country": "Czech Republic",
+                                    "country": "Warning",
                                     "litres": 301.9
                                   }, {
-                                    "country": "Ireland",
-                                    "litres": 201.1
-                                  }, {
-                                    "country": "Germany",
-                                    "litres": 165.8
-                                  }, {
-                                    "country": "Australia",
-                                    "litres": 139.9
-                                  }, {
-                                    "country": "Austria",
-                                    "litres": 128.3
-                                  }, {
-                                    "country": "UK",
-                                    "litres": 99
-                                  }, {
-                                    "country": "Belgium",
-                                    "litres": 60
-                                  }, {
-                                    "country": "The Netherlands",
-                                    "litres": 50
-                                  } ],
+                                    "country": "Offensive Language",
+                                    "litres": 501.1
+                                  }],
                                   "valueField": "litres",
                                   "titleField": "country",
                                   "export": {
