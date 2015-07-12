@@ -33,6 +33,9 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
 
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.1.4.min.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -201,6 +204,21 @@
                         }).addTo(map);
                         circle.bindPopup("10 reports of an incident here.");
                         </script>
+                        <br>
+                        <div id="bar">
+                        <script type="text/javascript">
+                            var svg = dimple.newSvg("div#bar", 800, 600);
+                            var data = [
+                              { "Word":"Hello", "Awesomeness":2000 },
+                              { "Word":"World", "Awesomeness":3000 }
+                            ];
+                            var chart = new dimple.chart(svg, data);
+                            chart.addCategoryAxis("x", "Word");
+                            chart.addMeasureAxis("y", "Awesomeness");
+                            chart.addSeries(null, dimple.plot.bar);
+                            chart.draw();
+                          </script>
+                          </div>
 
 
 
