@@ -250,62 +250,39 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Report an Incident</h4>
+                <h4 class="modal-title">Add a Useful Resource</h4>
               </div>
               <div class="modal-body">
                 <form class="form-horizontal">
                   <div class="form-group">
-                    <label for="issueTitle" class="col-sm-3 control-label">Incident *</label>
+                    <label for="issueTitle" class="col-sm-3 control-label">Resource Name *</label>
                     <div class="col-sm-7">
-                      <input type="text" class="form-control" id="issueTitle" placeholder="Incident Type (Sexual Assault, Offensive language,...)" >
+                      <input type="text" class="form-control" id="issueTitle" placeholder="Resource Name" >
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="issueSummary" class="col-sm-3 control-label">Summary *</label>
+                    <label for="issueEvent" class="col-sm-3 control-label">Category *</label>
+                    <div class="col-sm-7">
+                      <select id="issueEvent" class="form-control">
+                        <option>Know Your Rights</option>
+                        <option>Resources Near You</option>
+                        <option>How To Help a Friend</option>
+                        <option>Understand the Terms and Keep Your Campus Safe</option>
+                      </select>
+                    </div>
+                    </div>
+                  <div class="form-group">
+                    <label for="issuePeople" class="col-sm-4 control-label">Have you used the resource before and how? </label>
                     <div class="col-sm-7">
                       <textarea id="issueSummary" class="form-control" rows="3"></textarea>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="issueEvent" class="col-sm-3 control-label">Involvement *</label>
+                    <label for="issueSummary" class="col-sm-3 control-label">Link an URL *</label>
                     <div class="col-sm-7">
-                      <select id="issueEvent" class="form-control">
-                        <option>I was involved first hand</option>
-                        <option>I saw this happen</option>
-                      </select>
-                    </div>
-                    </div>
-                    <div class="form-group">
-                    <label for="issueSupplier" class="col-sm-4 control-label">When did this Happen?</label>
-                    <div class="col-sm-5">
-                        <input id="theDate" type="date"/>
+                      <input type="text" class="form-control" id="issueTitle" placeholder="Link (http://...)">
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="issueEvent" class="col-sm-3 control-label">Severity</label>
-                    <div class="col-sm-7">
-                      <select id="issueEvent" class="form-control">
-                        <option>Severe - rape, unwanted sexual touching, harassment,..</option>
-                        <option>Warning - not dangerous or pressing, but clearly an act of unnecessary sexual harassment</option>
-                        <option> Regular - activity of which intent/details are unclear, but inappropriate/uncomfortable</option>
-                      </select>
-                    </div>
-                    </div>
-                  <div class="form-group">
-                    <label for="issuePeople" class="col-sm-4 control-label">Where did this Happen?</label>
-                    <div class="col-sm-7">
-                      <input type="text" class="form-control" id="issuePeople" placeholder="General Location">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="issueEvent" class="col-sm-5 control-label">Do you want people commenting on your report? *</label>
-                    <div class="col-sm-3">
-                      <select id="issueEvent" class="form-control">
-                        <option>Yes</option>
-                        <option>No</option>
-                      </select>
-                    </div>
-                    </div>
                   <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-7" style="float:right">
                       <button type="submit" class="btn btn-default">SAVE</button>
